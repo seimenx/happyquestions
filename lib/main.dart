@@ -7,6 +7,5 @@ void main() {
   runApp(MaterialApp(
       title: StringResources.AppTitle,
       theme: DefaultTheme.lightTheme,
-      darkTheme: DefaultTheme.darkTheme,
       home: Home()));
 }
