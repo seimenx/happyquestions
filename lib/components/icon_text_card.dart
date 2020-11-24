@@ -15,29 +15,36 @@ class IconTextCard extends StatefulWidget {
 class _IconTextCardState extends State<IconTextCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: Dimens.defaultMargin,
       child: Card(
-        child: InkWell(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Column(
-              children: [
-                widget.icon,
-              ],
-            ),
-            SizedBox(width: Dimens.defaultMarginDouble, height: 0),
-            Column(
-              children: [
-                Text(
-                  widget.text,
-                  style: TextStyling.normalText,
-                )
-              ],
+            InkWell(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      widget.icon,
+                    ],
+                  ),
+                  SizedBox(width: Dimens.defaultMarginDouble, height: 0),
+                  Column(
+                    children: [
+                      Text(
+                        widget.text,
+                        style: TextStyling.normalText,
+                      )
+                    ],
+                  )
+                ],
+              ),
             )
           ],
-        )),
+        ),
       ),
     );
   }
